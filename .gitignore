@@ -1,1 +1,4 @@
 .vscode/
+plugins/
+config/
+data/
