@@ -15,6 +15,4 @@ RUN chmod +x mcl && \
 
 VOLUME ["/app/plugins","/app/config","/app/data","/app/logs"]
 
-EXPOSE 8080
-
 CMD ["./mcl"]
