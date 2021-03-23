@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  mcl:
+    build: .
+    image: kagurazakanyaa/mcl:latest
+    network_mode: bridge
+    volumes:
+      - "./plugins:/app/plugins"
+      - "./config:/app/config"
+      - "./data:/app/data"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
