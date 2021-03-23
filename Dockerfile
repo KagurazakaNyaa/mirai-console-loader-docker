@@ -10,7 +10,7 @@ RUN export zip_name=$(echo ${MCL_VERSION} | sed 's/v/mcl-/') &&\
 RUN unzip /tmp/mcl.zip -d /app && rm /tmp/mcl.zip
 
 RUN chmod +x mcl && \
-    ./mcl --update-package net.mamoe:mirai-core-all --channel nightly &&\
+    ./mcl --update-package net.mamoe:mirai-core-all &&\
     ./mcl --dry-run
 
 VOLUME ["/app/plugins","/app/config","/app/data","/app/logs"]
