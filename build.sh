@@ -11,7 +11,7 @@ git config user.name github-actions
 git config user.email github-actions@github.com
 git add timestamp
 git add currentversion
-git commit -a -m "Auto Update to screeps "$version
+git commit -a -m "Auto Update to mcl "$version
 git tag -f $version
 git tag -f latest
 git push
