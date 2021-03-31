@@ -12,6 +12,7 @@ RUN unzip /tmp/mcl.zip -d /app && rm /tmp/mcl.zip
 RUN chmod +x mcl && \
     ./mcl --update-package net.mamoe:mirai-core-all &&\
     ./mcl --update-package net.mamoe:mirai-api-http --channel stable --type plugin &&\
+    ./mcl --update-package net.mamoe:mirai-login-solver-selenium --channel nightly --type plugin &&\
     ./mcl --dry-run
 
 VOLUME ["/app/plugins","/app/config","/app/data","/app/logs"]
