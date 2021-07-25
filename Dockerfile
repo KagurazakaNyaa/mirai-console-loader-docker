@@ -1,6 +1,6 @@
 FROM openjdk:11-buster
 
-ENV MCL_VERSION v1.1.0
+ENV MCL_VERSION v1.2.1
 
 WORKDIR /app
 
