@@ -2,11 +2,13 @@ version: "3.3"
 
 services:
   mcl:
-    build: .
     image: kagurazakanyaa/mcl:latest
     network_mode: host
+    tty: true
+    stdin_open: true
     volumes:
       - "./plugins:/app/plugins"
       - "./config:/app/config"
       - "./data:/app/data"
+      - "./bots:/app/bots"
     restart: unless-stopped

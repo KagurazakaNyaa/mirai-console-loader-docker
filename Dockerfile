@@ -15,6 +15,6 @@ RUN chmod +x mcl && \
     ./mcl --update-package net.mamoe:mirai-login-solver-selenium --channel nightly --type plugin &&\
     ./mcl --dry-run
 
-VOLUME ["/app/plugins","/app/config","/app/data","/app/logs"]
+VOLUME ["/app/plugins","/app/config","/app/data","/app/bots","/app/logs"]
 
 CMD ["./mcl"]
