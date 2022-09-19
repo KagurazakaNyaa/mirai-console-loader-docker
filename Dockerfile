@@ -11,6 +11,8 @@ RUN export zip_name=$(echo ${MCL_VERSION} | sed 's/v/mcl-/') &&\
 
 RUN chmod +x mcl && \
     ./mcl --update-package net.mamoe:mirai-core-all &&\
+    ./mcl --update-package org.itxtech:mcl-addon &&\
+    ./mcl --update-package org.itxtech:soyuz &&\
     ./mcl --update-package net.mamoe:mirai-api-http --channel stable-v2 --type plugin &&\
     ./mcl --update-package net.mamoe:mirai-login-solver-selenium --channel nightly --type plugin &&\
     ./mcl --dry-run
