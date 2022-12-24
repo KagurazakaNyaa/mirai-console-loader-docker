@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-ENV MCL_VERSION 
+ENV MCL_VERSION v2.1.2
 
 WORKDIR /app
 
