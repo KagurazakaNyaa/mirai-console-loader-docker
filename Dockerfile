@@ -21,4 +21,4 @@ ENV JAVA_OPTS -Dmirai.slider.captcha.supported
 
 VOLUME ["/app/plugins","/app/config","/app/data","/app/bots","/app/logs"]
 
-CMD ["./mcl"]
+CMD ["./mcl", "-u"]
