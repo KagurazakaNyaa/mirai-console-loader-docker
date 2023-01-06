@@ -1,12 +1,5 @@
 #!/bin/bash
-max_retry=5
-counter=0
-until [ -n "${version}" ]
-do
-    sleep 1
-    [[ counter -eq $max_retry ]] && echo "Failed!" && exit 1
-    version=$(curl --silent "https://api.github.com/repos/iTXTech/mirai-console-loader/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
-done
+version=$(curl --silent -H "Authorization: Bearer ${GITHUB_TOKEN}" "https://api.github.com/repos/iTXTech/mirai-console-loader/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
 currentversion=$(cat currentversion)
 echo $version > currentversion
 if [[ "$currentversion" == "$version" ]]; then
