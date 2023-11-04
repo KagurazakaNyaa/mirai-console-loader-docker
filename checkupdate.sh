@@ -6,8 +6,10 @@ if [[ "$currentversion" == "$version" ]]; then
     exit
 fi
 sed -i 's/^ENV MCL_VERSION.*$/ENV MCL_VERSION '$version'/i' Dockerfile
-git config user.name github-actions
-git config user.email github-actions@github.com
+
+git config user.name "github-actions[bot]"
+git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
 git add currentversion
 git commit -a -m "Auto Update to mcl "$version
 git tag -f $version
